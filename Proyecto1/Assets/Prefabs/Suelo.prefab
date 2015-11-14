@@ -9,8 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 416982}
   - 33: {fileID: 3328170}
-  - 65: {fileID: 6509736}
   - 23: {fileID: 2397596}
+  - 61: {fileID: 6166572}
   m_Layer: 0
   m_Name: Suelo
   m_TagString: Floor
@@ -61,18 +61,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120574}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &6509736
-BoxCollider:
+--- !u!61 &6166572
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120574}
+  m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: .99999994}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
