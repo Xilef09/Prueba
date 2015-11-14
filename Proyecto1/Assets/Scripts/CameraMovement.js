@@ -5,7 +5,7 @@ public var posY : float = 2.0;
 public var despX: float = 2.0;
 
 function Start () {
-	player = GameObject.Find("Player").transform;
+	player = GameObject.FindGameObjectWithTag("Player").transform;
 	transform.position.y = posY;
 }
 
