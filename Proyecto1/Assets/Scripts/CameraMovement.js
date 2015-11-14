@@ -7,10 +7,9 @@ public var despX: float = 2.0;
 function Start () {
 	player = GameObject.Find("Player").transform;
 	transform.position.y = posY;
-	Debug.Log(transform.position);
 }
 
 function Update () {
-	transform.position = player.position - Vector3(despX, posY-player.position.y, -5.0f);
+	transform.position = player.position - Vector3(0.0f,0.0f, 5.0f);
 	
 }
