@@ -51,9 +51,7 @@ function FixedUpdate () {
 
 
 function OnCollisionEnter2D (hit : Collision2D) {
-	for (var contact : ContactPoint2D in hit.contacts) {
-		if (contact.normal.y > 0.8) {
+	if (hit.gameObject.tag == "Floor") {
 			Application.LoadLevel(Application.loadedLevel);
-		}
 	}
 }
