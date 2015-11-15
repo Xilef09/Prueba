@@ -1,8 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerMovement.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LevelGenerator.js">
     <Files>
       <File FileName="Assets\Scripts\PlayerMovement.js" Line="70" Column="3" />
+      <File FileName="Assets\Scripts\LevelGenerator.js" Line="19" Column="36" />
+      <File FileName="..\..\..\discDur\runn\Runner\Assets\Scripts\Level Generator.js" Line="13" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
