@@ -170,7 +170,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11475478, guid: bfcd6b85c07f53045b4baff68cb9fe3c, type: 2}
       propertyPath: jumpspeed
-      value: 300
+      value: 150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bfcd6b85c07f53045b4baff68cb9fe3c, type: 2}
@@ -292,6 +292,18 @@ Prefab:
       propertyPath: lastPlatform
       value: 
       objectReference: {fileID: 635259712}
+    - target: {fileID: 11416984, guid: ecfce9ad76e3e59448af37dde74c8e64, type: 2}
+      propertyPath: oneTolastPlatform
+      value: 
+      objectReference: {fileID: 635259712}
+    - target: {fileID: 11416984, guid: ecfce9ad76e3e59448af37dde74c8e64, type: 2}
+      propertyPath: berriePrefab
+      value: 
+      objectReference: {fileID: 174088, guid: ecdd000e8be1c424fbe1e30c8af87ea2, type: 2}
+    - target: {fileID: 11416984, guid: ecfce9ad76e3e59448af37dde74c8e64, type: 2}
+      propertyPath: cubePrefab
+      value: 
+      objectReference: {fileID: 109568, guid: ae9bc2ebbfe6daa4d8f886b9a5da7081, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecfce9ad76e3e59448af37dde74c8e64, type: 2}
   m_IsPrefabParent: 0
@@ -355,7 +367,7 @@ Camera:
   near clip plane: .300000012
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -376,7 +388,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1730751474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

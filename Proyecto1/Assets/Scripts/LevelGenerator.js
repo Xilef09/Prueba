@@ -1,9 +1,11 @@
 ﻿#pragma strict
 private var cam : Transform;
-var groundPrefab : GameObject;
+public var groundPrefab : GameObject;
+public var berriePrefab : GameObject;
 private var newRotation : Quaternion;
 private var newPosition : Vector3;
 public var lastPlatform : Transform;
+public var oneTolastPlatform :Transform;
 
 function Start () {
 	cam = GameObject.Find("Main Camera").transform;
@@ -12,24 +14,52 @@ function Start () {
 
 function Update () {
 	if (cam.position.x < lastPlatform.position.x+90.0f){
-			//Debug.Log("vecevececvec"+ lastPlatform.rotation.z);
-			newRotation = Quaternion.identity;
-			newRotation.eulerAngles.z =Random.Range(-40.0,40.0);
-			var iniX : float = lastPlatform.position.x - Mathf.Abs(Mathf.Cos(lastPlatform.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2);
-			//Debug.Log("suma de x:  " + Mathf.Cos(Mathf.Deg2Rad(lastPlatform.eulerAngles.z)));
-			//Debug.Log("finalterra:  " + iniX);
-			var iniY : float;
-			if(lastPlatform.rotation.eulerAngles.z>180) iniY  = lastPlatform.position.y+Mathf.Abs(Mathf.Sin(lastPlatform.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2);
-			else if(lastPlatform.rotation.eulerAngles.z<180) iniY = lastPlatform.position.y-Mathf.Abs(Mathf.Sin(lastPlatform.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2);
-			newPosition.x = iniX - Mathf.Abs(Mathf.Cos(newRotation.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2);
-			//Debug.Log("cos de:  " +newRotation.eulerAngles.z+ " es: "  + Mathf.Cos(newRotation.eulerAngles.z));
-			//Debug.Log("nouterra:  " + newPosition.x);
-			if(newRotation.eulerAngles.z>180) newPosition.y = iniY+ Mathf.Abs(Mathf.Sin(newRotation.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2);
-			else if(newRotation.eulerAngles.z<180) newPosition.y = iniY- Mathf.Abs(Mathf.Sin(newRotation.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2);
+			getNewRandomRotation();
+			var iniX : float = getEndXofPlat(lastPlatform);
+			var iniY : float = getEndYofPlat(lastPlatform);
+			newPosition.x = getNewX(iniX);
+			newPosition.y = getNewY(iniY);
 			newPosition.z=0;
+			oneTolastPlatform = lastPlatform;
 			lastPlatform =Instantiate(groundPrefab, newPosition, newRotation).transform;
-			newPosition.y+=15;
-			Instantiate(groundPrefab, newPosition, newRotation);
+			Instantiate(groundPrefab, newPosition+Vector3(0,15,0), newRotation);
+			createNewBerries(getEndXofPlat(lastPlatform),getEndYofPlat(lastPlatform),getEndXofPlat(oneTolastPlatform),getEndYofPlat(oneTolastPlatform));
 	}
-//Debug.Log("cam position: " + cam.position.x + "lastPlat position: " + lastPlatform.position.x);
+
+}
+
+
+function createNewBerries(LeftDownX : float , LeftDownY: float, RightDownX: float, RightDownY: float){
+
+	var ScInitialPosition : float = Random.Range(0.0,1.0);
+	var startVec : Vector3 = Vector3(RightDownX, RightDownY, 0);
+	var platVec : Vector3 = Vector3(LeftDownX-RightDownX,LeftDownY-RightDownY,0);
+	var newPos : Vector3 = startVec+platVec*ScInitialPosition;
+	newPos.y+=Random.Range(1.0,14.0);
+	var newRot : Quaternion = Quaternion.identity;
+	Instantiate (berriePrefab, newPos,  newRot);
+	
+	
+	
+}
+
+function getNewX(start : float){
+	return (start - Mathf.Abs(Mathf.Cos(newRotation.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2));
+}
+function getNewY(start : float){
+	if(newRotation.eulerAngles.z>180) return(start+ Mathf.Abs(Mathf.Sin(newRotation.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2));
+	else if(newRotation.eulerAngles.z<180) return(start - Mathf.Abs(Mathf.Sin(newRotation.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2));
+}
+function getEndXofPlat(plat : Transform){
+	return plat.position.x - Mathf.Abs(Mathf.Cos(plat.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2);
+}
+
+function getEndYofPlat(plat : Transform){
+	var ini : float;
+	if(plat.rotation.eulerAngles.z>180) return plat.position.y+Mathf.Abs(Mathf.Sin(plat.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2);
+	else if(plat.rotation.eulerAngles.z<180) return plat.position.y-Mathf.Abs(Mathf.Sin(plat.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2);	
+}
+function getNewRandomRotation(){
+	newRotation = Quaternion.identity;
+	newRotation.eulerAngles.z =Random.Range(-40.0,40.0);
 }
