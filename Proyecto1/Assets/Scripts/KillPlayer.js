@@ -7,7 +7,7 @@ function Start () {
 	
 }
 
-function OnTriggerEnter2D (hit : Collider2D) {
+function OnCollisionEnter2D (hit : Collision2D) {
 	if (hit.gameObject.tag == "Player") {
 		//GameObject.Find("Config").SendMessage("GetPickUp"); Para sumar los puntos en un FUTURO
 		//yield WaitForSeconds(2); // no usar el yiel en funciones update

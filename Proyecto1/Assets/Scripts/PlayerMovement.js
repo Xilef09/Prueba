@@ -26,7 +26,7 @@ function Update () {
 }
 
 function FixedUpdate () {
-	GetComponent.<Rigidbody2D>().AddForce(-Vector2.right*speed);
+	GetComponent.<Rigidbody2D>().AddForce(-Vector2.right*speed/2);
 	
 	if (GetComponent.<Rigidbody2D>().velocity.x >= maxSpeed) {
 		GetComponent.<Rigidbody2D>().velocity.x = maxSpeed;
@@ -34,9 +34,9 @@ function FixedUpdate () {
 	
 	if (Input.GetButton("Jump")) {
 		jumpClicked = true;
-		actualJumpSpeed = jumpspeed;
+		actualJumpSpeed += jumpspeed;
 		
-		GetComponent.<Rigidbody2D>().AddForce(Vector2.up*actualJumpSpeed);
+		GetComponent.<Rigidbody2D>().AddForce(Vector2.up*actualJumpSpeed/2);
 		actualJumpSpeed -= reduction;
 	
 		if (jumpClicked) {
