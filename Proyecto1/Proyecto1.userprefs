@@ -1,6 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerMovement.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\KillPlayer.js">
+    <Files>
+      <File FileName="Assets\Scripts\PlayerMovement.js" Line="56" Column="3" />
+      <File FileName="Assets\Scripts\PickUp.js" Line="11" Column="1" />
+      <File FileName="Assets\Scripts\KillPlayer.js" Line="18" Column="5" />
+    </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
