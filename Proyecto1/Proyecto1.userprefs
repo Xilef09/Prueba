@@ -1,13 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DestroyOnTime.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LevelGenerator.js">
     <Files>
-      <File FileName="Assets\Scripts\LevelGenerator.js" Line="19" Column="55" />
-      <File FileName="Assets\Scripts\PlayerMovement.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LevelGenerator.js" Line="43" Column="2" />
+      <File FileName="Assets\Scripts\PlayerMovement.js" Line="37" Column="27" />
       <File FileName="Assets\Scripts\PickUp.js" Line="1" Column="1" />
       <File FileName="..\..\..\discDur\runn\Runner\Assets\Scripts\Level Generator.js" Line="1" Column="1" />
-      <File FileName="..\..\..\discDur\Yohoho\New Unity Project\Assets\Scripts\DestroyOnTime.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\DestroyOnTime.js" Line="1" Column="1" />
+      <File FileName="..\..\..\discDur\Yohoho\New Unity Project\Assets\Scripts\DestroyOnTime.js" Line="6" Column="19" />
+      <File FileName="Assets\Scripts\DestroyWhenUseless.js" Line="8" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
