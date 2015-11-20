@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraMovement.js" />
      <Compile Include="Assets\Scripts\DestroyWhenUseless.js" />
+     <Compile Include="Assets\Scripts\KillPlayer.js" />
      <Compile Include="Assets\Scripts\LevelGenerator.js" />
      <Compile Include="Assets\Scripts\PickUp.js" />
      <Compile Include="Assets\Scripts\PlayerMovement.js" />
