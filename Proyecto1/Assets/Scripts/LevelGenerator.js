@@ -17,13 +17,13 @@ function Update () {
 			newRotation.eulerAngles.z =Random.Range(-40.0,40.0);
 			var iniX : float = lastPlatform.position.x - Mathf.Abs(Mathf.Cos(lastPlatform.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2);
 			//Debug.Log("suma de x:  " + Mathf.Cos(Mathf.Deg2Rad(lastPlatform.eulerAngles.z)));
-			Debug.Log("finalterra:  " + iniX);
+			//Debug.Log("finalterra:  " + iniX);
 			var iniY : float;
 			if(lastPlatform.rotation.eulerAngles.z>180) iniY  = lastPlatform.position.y+Mathf.Abs(Mathf.Sin(lastPlatform.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2);
 			else if(lastPlatform.rotation.eulerAngles.z<180) iniY = lastPlatform.position.y-Mathf.Abs(Mathf.Sin(lastPlatform.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2);
 			newPosition.x = iniX - Mathf.Abs(Mathf.Cos(newRotation.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2);
 			//Debug.Log("cos de:  " +newRotation.eulerAngles.z+ " es: "  + Mathf.Cos(newRotation.eulerAngles.z));
-			Debug.Log("nouterra:  " + newPosition.x);
+			//Debug.Log("nouterra:  " + newPosition.x);
 			if(newRotation.eulerAngles.z>180) newPosition.y = iniY+ Mathf.Abs(Mathf.Sin(newRotation.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2);
 			else if(newRotation.eulerAngles.z<180) newPosition.y = iniY- Mathf.Abs(Mathf.Sin(newRotation.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2);
 			newPosition.z=0;
