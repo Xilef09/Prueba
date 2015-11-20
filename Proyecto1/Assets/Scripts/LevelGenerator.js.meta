@@ -1,10 +1,14 @@
 fileFormatVersion: 2
 guid: d406bbe1f362b074b88655763340bbf1
-timeCreated: 1447528643
+timeCreated: 1448040510
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - groundPrefab: {fileID: 120574, guid: 1efd6ad17d24bd24abc99d1a05fa9479, type: 2}
+  - berriePrefab: {fileID: 174088, guid: ecdd000e8be1c424fbe1e30c8af87ea2, type: 2}
+  - lastPlatform: {instanceID: 0}
+  - oneTolastPlatform: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
