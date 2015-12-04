@@ -10,6 +10,9 @@ private var floor: GameObject;
 private var cam : Transform;
 private var jumpClicked : boolean = false;
 private var actualJumpSpeed : float = 0.0;
+private var capturing : boolean = false;
+private var t : float = 0.0;
+private var duration : float = 4.0;
 
 
 function Start () {
@@ -31,8 +34,14 @@ function FixedUpdate () {
 	if (GetComponent.<Rigidbody2D>().velocity.x >= maxSpeed) {
 		GetComponent.<Rigidbody2D>().velocity.x = maxSpeed;
 	}
-	
-	if (Input.GetButton("Jump")) {
+	if(capturing){
+		colorChanger();
+		sizeChanger();
+		GetComponent.<Rigidbody2D>().gravityScale=0.0;
+		GetComponent.<Rigidbody2D>().velocity.y =0.0;
+		GetComponent.<Rigidbody2D>().velocity.x =0.0;
+	}
+	else if (Input.GetButton("Jump")) {
 		jumpClicked = true;
 		actualJumpSpeed += jumpspeed;
 		
@@ -49,9 +58,21 @@ function FixedUpdate () {
 	}
 }
 
+function colorChanger(){
+	GetComponent.<Renderer>().material.color= Color.Lerp(GetComponent.<Renderer>().material.color, Color.red, t);
+	t+=Time.deltaTime/duration;
+
+}
+function sizeChanger(){
+	transform.localScale-=Vector3(Time.deltaTime/duration,Time.deltaTime/duration,Time.deltaTime/duration);
+	
+}
 
 function OnCollisionEnter2D (hit : Collision2D) {
 	if (hit.gameObject.tag == "Floor") {
 			Application.LoadLevel(Application.loadedLevel);
+	}
+	if (hit.gameObject.tag == "Pokeball"){
+			capturing = true;
 	}
 }

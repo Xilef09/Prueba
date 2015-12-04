@@ -14,7 +14,7 @@ function OnCollisionEnter2D (hit : Collision2D) {
 		//Debug.Log("Capturado!!!!!!!!!");
 		
 		anim.SetBool("PlayerFound", true);
-		yield WaitForSeconds(1);
+		yield WaitForSeconds(50);
 		//anim.SetBool("PlayerFound", false);
 		
 		Application.LoadLevel(Application.loadedLevel);
