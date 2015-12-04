@@ -1,4 +1,11 @@
 ﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\KillPlayer.js">
+    <Files>
+      <File FileName="Assets\Scripts\PlayerMovement.js" Line="53" Column="1" />
+      <File FileName="Assets\Scripts\PickUp.js" Line="11" Column="1" />
+      <File FileName="Assets\Scripts\KillPlayer.js" Line="10" Column="48" />
+    </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
