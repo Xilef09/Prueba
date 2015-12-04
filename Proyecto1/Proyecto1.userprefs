@@ -1,9 +1,10 @@
-
-<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LevelGenerator.js">
     <Files>
-      <File FileName="Assets\Scripts\LevelGenerator.js" Line="91" Column="5" />
+      <File FileName="Assets\Scripts\LevelGenerator.js" Line="48" Column="48" />
+      <File FileName="Assets\Scripts\PlayerMovement.js" Line="53" Column="1" />
+      <File FileName="Assets\Scripts\PickUp.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

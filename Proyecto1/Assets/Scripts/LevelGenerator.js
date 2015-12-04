@@ -2,6 +2,7 @@
 private var cam : Transform;
 public var groundPrefab : GameObject;
 public var berriePrefab : GameObject;
+public var pokeballPrefab : GameObject;
 private var newRotation : Quaternion;
 private var newPosition : Vector3;
 public var lastPlatform : Transform;
@@ -23,10 +24,10 @@ function Update () {
 			oneTolastPlatform = lastPlatform;
 			lastPlatform =Instantiate(groundPrefab, newPosition, newRotation).transform;
 			Instantiate(groundPrefab, newPosition+Vector3(0,15,0), newRotation);
-			createNewBerries(getEndXofPlat(lastPlatform),getEndYofPlat(lastPlatform),getEndXofPlat(oneTolastPlatform),getEndYofPlat(oneTolastPlatform));
+			createNewBerries(getEndXofPlat(lastPlatform),getEndYofPlat(lastPlatform),getEndXofPlat(oneTolastPlatform),getEndYofPlat(oneTolastPlatform));			
 	}
-
 }
+
 
 
 function createNewBerries(LeftDownX : float , LeftDownY: float, RightDownX: float, RightDownY: float){
@@ -64,7 +65,6 @@ function createNewBerries(LeftDownX : float , LeftDownY: float, RightDownX: floa
 				if(offset>7.0) Instantiate (berriePrefab, newPos+Vector3(-0.75,-1.5,0),  newRot);
 				else Instantiate (berriePrefab, newPos+Vector3(-0.75,1.5,0),  newRot);
 			}
-			
 		case 4:
 			Instantiate (berriePrefab, newPos,  newRot);
 			if(ScInitialPosition>5.0){
@@ -88,18 +88,19 @@ function createNewBerries(LeftDownX : float , LeftDownY: float, RightDownX: floa
 					Instantiate (berriePrefab, newPos+Vector3(0,1.5,0),  newRot);
 					Instantiate (berriePrefab, newPos+Vector3(-1.5,1.5,0),  newRot);
 				}
-			}
-	
+			}	
 	}
 }
 
 function getNewX(start : float){
 	return (start - Mathf.Abs(Mathf.Cos(newRotation.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2));
 }
+
 function getNewY(start : float){
 	if(newRotation.eulerAngles.z>=180) return(start+ Mathf.Abs(Mathf.Sin(newRotation.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2));
 	else return(start - Mathf.Abs(Mathf.Sin(newRotation.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2));
 }
+
 function getEndXofPlat(plat : Transform){
 	return plat.position.x - Mathf.Abs(Mathf.Cos(plat.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2);
 }
@@ -109,7 +110,8 @@ function getEndYofPlat(plat : Transform){
 	if(plat.rotation.eulerAngles.z>=180) return plat.position.y+Mathf.Abs(Mathf.Sin(plat.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2);
 	else return plat.position.y-Mathf.Abs(Mathf.Sin(plat.eulerAngles.z*Mathf.Deg2Rad)*groundPrefab.transform.localScale.x/2);	
 }
+
 function getNewRandomRotation(){
 	newRotation = Quaternion.identity;
-	newRotation.eulerAngles.z =Random.Range(-40.0,40.0);
+	newRotation.eulerAngles.z =Random.Range(-30.0,30.0);
 }
