@@ -115,9 +115,10 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300210, guid: 0a7d53c6bb253fb44a62c477013a996d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+
 --- !u!1001 &100100000
 Prefab:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
@@ -136,5 +137,5 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 157734}
+  m_RootGameObject: {fileID: 0}
   m_IsPrefabParent: 1
