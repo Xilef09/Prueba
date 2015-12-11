@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - Coin
+  - Pokeball
   layers:
   - Default
   - TransparentFX
