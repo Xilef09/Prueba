@@ -170,7 +170,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11475478, guid: bfcd6b85c07f53045b4baff68cb9fe3c, type: 2}
       propertyPath: jumpspeed
-      value: 150
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 435468, guid: bfcd6b85c07f53045b4baff68cb9fe3c, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 435468, guid: bfcd6b85c07f53045b4baff68cb9fe3c, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 435468, guid: bfcd6b85c07f53045b4baff68cb9fe3c, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11475478, guid: bfcd6b85c07f53045b4baff68cb9fe3c, type: 2}
+      propertyPath: maxSpeed
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bfcd6b85c07f53045b4baff68cb9fe3c, type: 2}
