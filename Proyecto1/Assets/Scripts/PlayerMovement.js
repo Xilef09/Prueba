@@ -73,6 +73,7 @@ function OnCollisionEnter2D (hit : Collision2D) {
 			Application.LoadLevel(Application.loadedLevel);
 	}
 	if (hit.gameObject.tag == "Pokeball"){
+			Debug.Log("HOLA");
 			capturing = true;
 	}
 }

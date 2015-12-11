@@ -34,7 +34,9 @@ function OnCollisionEnter2D (hit : Collision2D) {
 		GetComponent.<Rigidbody2D>().gravityScale=0.0;
 		collisioned = true;
 		GetComponent.<Rigidbody2D>().velocity=GetComponent.<Rigidbody2D>().velocity/2;
-		yield WaitForSeconds(5);
+		yield WaitForSeconds(3);
+		anim.SetBool("PokemonInside",true);
+		yield WaitForSeconds(4);
 		//anim.SetBool("PlayerFound", false);		
 		Application.LoadLevel(Application.loadedLevel);
 	}

@@ -1,9 +1,9 @@
-<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\KillPlayer.js">
     <Files>
       <File FileName="Assets\Scripts\PlayerMovement.js" Line="49" Column="32" />
-      <File FileName="Assets\Scripts\LevelGenerator.js" Line="91" Column="5" />
+      <File FileName="Assets\Scripts\LevelGenerator.js" Line="1" Column="1" />
       <File FileName="Assets\Scripts\KillPlayer.js" Line="11" Column="2" />
       <File FileName="Assets\Scripts\PickUp.js" Line="8" Column="23" />
     </Files>
