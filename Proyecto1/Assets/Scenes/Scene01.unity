@@ -172,7 +172,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!114 &96431178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,7 +342,7 @@ Prefab:
     - target: {fileID: 11416984, guid: ecfce9ad76e3e59448af37dde74c8e64, type: 2}
       propertyPath: pokeballPrefab
       value: 
-      objectReference: {fileID: 157734, guid: 217cd420ccc779d4690b9caddfd578c9, type: 2}
+      objectReference: {fileID: 123416, guid: 217cd420ccc779d4690b9caddfd578c9, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecfce9ad76e3e59448af37dde74c8e64, type: 2}
   m_IsPrefabParent: 0
@@ -407,7 +407,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11475478, guid: bfcd6b85c07f53045b4baff68cb9fe3c, type: 2}
       propertyPath: speed
-      value: .5
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bfcd6b85c07f53045b4baff68cb9fe3c, type: 2}

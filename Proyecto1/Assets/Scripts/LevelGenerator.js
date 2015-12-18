@@ -1,4 +1,6 @@
 ﻿#pragma strict
+
+
 private var cam : Transform;
 public var groundPrefab : GameObject;
 public var berriePrefab : GameObject;
@@ -7,6 +9,10 @@ private var newRotation : Quaternion;
 private var newPosition : Vector3;
 public var lastPlatform : Transform;
 public var oneTolastPlatform :Transform;
+
+private var startVector : Vector3;
+private var platVector : Vector3;
+private var ScInitialPosition : float;
 
 function Start () {
 	cam = GameObject.Find("Main Camera").transform;
@@ -24,18 +30,48 @@ function Update () {
 			oneTolastPlatform = lastPlatform;
 			lastPlatform =Instantiate(groundPrefab, newPosition, newRotation).transform;
 			Instantiate(groundPrefab, newPosition+Vector3(0,15,0), newRotation);
-			createNewBerries(getEndXofPlat(lastPlatform),getEndYofPlat(lastPlatform),getEndXofPlat(oneTolastPlatform),getEndYofPlat(oneTolastPlatform));			
+			inicializePlatforms(getEndXofPlat(lastPlatform),getEndYofPlat(lastPlatform),getEndXofPlat(oneTolastPlatform),getEndYofPlat(oneTolastPlatform));
+			createNewBerries();	
+			createNewPokeballs();		
+	}
+}
+
+function inicializePlatforms(LeftDownX : float , LeftDownY: float, RightDownX: float, RightDownY: float) {
+	startVector = Vector3(RightDownX, RightDownY, 0);
+	platVector = Vector3(LeftDownX-RightDownX,LeftDownY-RightDownY,0);
+}
+
+
+function createNewPokeballs() {
+	ScInitialPosition = Random.Range(0.0,1.0);
+	
+	var newPos : Vector3 = startVector+platVector*ScInitialPosition;
+	var offset : float = Random.Range(1.0,14.0);
+	newPos.y+=offset;
+	var newRot : Quaternion = Quaternion.identity;
+	var numPokeballs : int = Random.Range(0,5);
+	
+	switch(numPokeballs) {
+		case 0:
+			break;
+		case 1:
+			Instantiate(pokeballPrefab, newPos, newRot);
+			break;
+		case 2: 
+			break;
+		case 3:
+			Instantiate(pokeballPrefab, newPos, newRot);
+			break;
+		case 4: 
+			break;	
 	}
 }
 
 
+function createNewBerries(){
 
-function createNewBerries(LeftDownX : float , LeftDownY: float, RightDownX: float, RightDownY: float){
-
-	var ScInitialPosition : float = Random.Range(0.0,1.0);
-	var startVec : Vector3 = Vector3(RightDownX, RightDownY, 0);
-	var platVec : Vector3 = Vector3(LeftDownX-RightDownX,LeftDownY-RightDownY,0);
-	var newPos : Vector3 = startVec+platVec*ScInitialPosition;
+	ScInitialPosition = Random.Range(0.0,1.0);
+	var newPos : Vector3 = startVector+platVector*ScInitialPosition;
 	var offset : float = Random.Range(1.0,14.0);
 	newPos.y+=offset;
 	var newRot : Quaternion = Quaternion.identity;

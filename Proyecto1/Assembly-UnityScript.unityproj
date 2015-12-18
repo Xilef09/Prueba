@@ -52,12 +52,6 @@
      <Compile Include="Assets\Scripts\LevelGenerator.js" />
      <Compile Include="Assets\Scripts\PickUp.js" />
      <Compile Include="Assets\Scripts\PlayerMovement.js" />
-     <None Include="Assets\VolumetricLines\Shaders\VolumetricLineShaderAlphaBlended.shader" />
-     <None Include="Assets\VolumetricLines\Shaders\VolumetricLineShaderAdditive.shader" />
-     <None Include="Assets\VolumetricLines\Shaders\VolumetricLineShaderAdditiveFast.shader" />
-     <None Include="Assets\VolumetricLines\Shaders\VolumetricLineStripShaderAdditive.shader" />
-     <None Include="Assets\VolumetricLines\Shaders\VolumetricLineStripShaderAlphaBlended.shader" />
-     <None Include="Assets\VolumetricLines\Shaders\VolumetricLineShaderAlphaBlendedFast.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
